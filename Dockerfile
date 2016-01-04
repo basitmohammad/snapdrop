@@ -8,6 +8,6 @@ RUN ln -s /usr/bin/nodejs /usr/sbin/node
 RUN npm install -g npm
 RUN npm install -g gulp bower forever
 RUN cd /src; npm install
-RUN cd /src; bower install
+RUN cd /src; bower install --allow-root
 EXPOSE 3002
 CMD [ "forever", "start", "/src/index.js" ]
