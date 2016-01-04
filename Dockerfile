@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install nodejs npm -y
+RUN apt-get install nodejs npm git -y
 COPY . /src
 RUN cd /src
 RUN ln -s /usr/bin/nodejs /usr/sbin/node
