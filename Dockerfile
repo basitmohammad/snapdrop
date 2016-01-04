@@ -5,9 +5,7 @@ RUN apt-get install nodejs npm -y
 COPY . /src
 RUN cd /src
 RUN npm install -g gulp bower forever
-RUN ls -al
-RUN pwd
-RUN npm install
-RUN bower install
+RUN cd /src; npm install
+RUN cd /src; bower install
 EXPOSE 3002
-CMD [ "forever", "start", "index.js" ]
+CMD [ "forever", "start", "/src/index.js" ]
