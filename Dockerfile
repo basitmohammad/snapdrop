@@ -11,4 +11,4 @@ RUN cd /src; npm install
 RUN cd /src; bower install --allow-root
 EXPOSE 3002
 WORKDIR /src
-CMD [ "node", "index.js" ]
+CMD [ "bash", "start.sh" ]
