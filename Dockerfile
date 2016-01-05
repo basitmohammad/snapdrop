@@ -1,7 +1,10 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install nodejs npm git -y
+RUN apt-get install curl
+RUN sh -c 'curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -'
+RUN apt-get install nodejs
+RUN apt-get install npm git -y
 COPY . /src
 RUN cd /src
 RUN ln -s /usr/bin/nodejs /usr/sbin/node
