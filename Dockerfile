@@ -11,6 +11,6 @@ RUN npm install -g npm
 RUN npm install -g gulp bower
 RUN cd /src; npm install
 RUN cd /src; bower install --allow-root
-EXPOSE 3002
+EXPOSE 3001
 WORKDIR /src
 CMD [ "bash", "start.sh" ]
